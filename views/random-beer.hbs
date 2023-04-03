@@ -1,12 +1,14 @@
 <div class="container">
 <h1>Random Beers</h1>
-<div class="row">
-<img src={{image_url}} alt={{name}}>
-<p>{{name}}</p>
-<p>{{description}}</p>
-<p>{{tagline}}</p>
-<p>{{food_pairing}}</p>
-<p>{{brewer_tips}}</p>
+{{> beerPartial}}
+
+<p>This goes great with:</p>
+<ul>
+    {{#each food-pairing}}
+    <li>{{this}}</li>
+    {{/each}}
+</ul>
+
 </div>
 </div>
 

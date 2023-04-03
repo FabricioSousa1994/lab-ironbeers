@@ -36,7 +36,20 @@ app.get('/random-beer', async (req, res) => {
   const randomBeers = await punkAPI.getRandom()
   console.log(randomBeers)
   res.render('random-beer', randomBeers[0])
+})
+
+/*também dava para fazer com o .then e ficaria assim:
+app.get('/random-beer, (req, res) => {
+  punkAPI
+  .getRandom()
+  .then(random-beer => {
+    console.log(responseFromAPI);
+    const randomBeer = random
+    res.render('random-beer',random-beer[0])
+  })
+  .catch(erros => console.logpo(error));
+})
 
 })
 
-app.listen(3000, () => console.log('🏃‍ on port 3000'));
+app.listen(3000, () => console.log('🏃‍ on port 3000'));*/

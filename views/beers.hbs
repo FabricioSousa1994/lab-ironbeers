@@ -2,11 +2,7 @@
 <h1>Beers</h1>
 <div class="row">
 {{#each beers}}
-<p>{{name}}</p>
-<p>{{description}}</p>
-<p>{{tagline}}</p>
-<img src={{image_url}} alt={{name}}>
-
+{{> beerPartial this}}
 {{/each}}
 </div>
 </div>
